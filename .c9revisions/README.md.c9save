@@ -1,0 +1,2 @@
+{"ts":1373982889781,"silentsave":true,"restoring":false,"patch":[[{"diffs":[[1,"angular-demos\n=============\n\nJust a set of pages using AngularJS in different ways.\n"]],"start1":0,"start2":0,"length1":0,"length2":84}]],"length":84}
+{"contributors":[],"silentsave":false,"ts":1373983507144,"patch":[[{"diffs":[[0,"t ways.\n"],[1,"\n\n-----------------------\nAdd files and commit them:\ngit add . \n\ngit commit -m \"First commit\"\n\nPush to github: \ngit push -u origin master"]],"start1":76,"start2":76,"length1":8,"length2":145}]],"length":221,"saved":false}

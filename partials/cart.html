@@ -1,0 +1,28 @@
+﻿<h2>Your Shopping Cart</h2>
+<div>
+  <table class="table">
+        <tr>
+            
+            <th>Description</th>
+            <th>Qty</th>
+            <th>Cost</th>
+            <th>Total</th>
+            <th></th>
+        </tr>
+        <tr data-ng-repeat="item in invoice.items">
+            <td><input type="text"data-ng-model="item.description"class="input-small"></td>           
+            <td><input type="number"data-ng-model="item.qty" ng:required class="input-mini"></td>
+            <td><input type="number"data-ng-model="item.cost" ng:required class="input-mini"></td>
+            <td data-ng-bind="item.qty * item.cost | currency"></td>
+            <td>
+                <a href="javascript:;" data-ng-click="removeItem($index)" class="btn btn-danger">X</a>
+            </td>
+        </tr>
+        <tr>
+            <td><a href="javascript:;" data-ng-click="addItem()" class="btn btn-small">add item</a></td>
+            <td></td>
+            <td>Total:</td>
+            <td data-ng-bind="total() | currency"></td>
+        </tr>
+    </table>
+</div>

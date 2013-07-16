@@ -1,0 +1,12 @@
+﻿<ul>
+    <li data-ng-repeat="item in data | startFrom:currentPage*pageSize | limitTo:pageSize">{{item}}
+    </li>
+</ul>
+<div>
+    <ul class="pager">
+        <li><a href="javascript:;" data-ng-disabled="currentPage == 0" data-ng-click="currentPage=currentPage-1">Previous</a></li>
+       <!-- <li>{{currentPage+1}}/{{numberOfPages()}}</li>-->
+        <li><a href="javascript:;" data-ng-disabled="currentPage >= data.length/pageSize - 1" data-ng-click="currentPage=currentPage+1">
+            Next </a></li>
+    </ul>
+</div>

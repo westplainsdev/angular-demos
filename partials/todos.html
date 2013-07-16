@@ -1,0 +1,14 @@
+﻿<h2>
+    Comment List</h2>
+<div class="commentList">
+    <div class="comment" data-ng-repeat="comment in comments">
+        <h3 class="commentAuthor" data-ng-bind="comment.author">
+        </h3>
+        <span data-ng-bind-html-unsafe="comment.text | markdown"></span>
+    </div>
+</div>
+<form name="commentForm" class="form-inline" data-ng-submit="post()">
+<input type="text" data-ng-model="author" placeholder="Your name" required />
+<input type="text" data-ng-model="text" placeholder="Say something..." required />
+<input type="submit" value="Add" class="btn btn-primary" />
+</form>

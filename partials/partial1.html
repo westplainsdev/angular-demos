@@ -1,0 +1,11 @@
+<p>This is the partial for view 1.</p>
+<p data-ng-bind="messageText"></p>
+
+<h3>Pages</h3>
+
+
+<dl data-ng-repeat="page in pages" class="dl-horizontal">
+    <dt data-ng-bind="page.title" class="headings"></dt>
+    <dd data-ng-show="page.subheader" data-ng-bind="page.subheader"></dd>
+    <dd data-ng-bind="page.content"></dd>
+</dl>

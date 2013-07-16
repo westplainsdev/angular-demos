@@ -1,0 +1,113 @@
+﻿<fieldset>
+    <legend>Add a User</legend>
+    <table class="form">
+        <colgroup>
+            <col width="120px" />
+            <col width="50%" />
+            <col width="120px" />
+            <col width="50%" />
+        </colgroup>
+        <tbody>
+            <tr>
+                <td>
+                    Username:
+                </td>
+                <td>
+                    <input type="text" data-ng-model="tempUser.username" />
+                </td>
+                <td>
+                    Password:
+                </td>
+                <td>
+                    <input type="text" data-ng-model="tempUser.password" />
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    Display Name:
+                </td>
+                <td>
+                    <input type="text" data-ng-model="tempUser.displayName" />
+                </td>
+                <td>
+                    Email:
+                </td>
+                <td>
+                    <input type="text" data-ng-model="tempUser.email" />
+                </td>
+            </tr>
+            <tr>
+                <td colspan="4">
+                    <input type="button" value="Add" data-ng-click="addUser()" />
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</fieldset>
+<hr />
+<table class="table table-bordered table-bordered table-striped">
+    <thead>
+        <tr>
+            <th>
+                Username
+            </th>
+            <th>
+                Password
+            </th>
+            <th>
+                Display Name
+            </th>
+            <th>
+                Email
+            </th>
+            <th>
+                Options
+            </th>
+        </tr>
+    </thead>
+    <tbody class="data">
+        <tr data-ng-repeat="user in users">
+            <td>
+                <div class="template-display">
+                    {{user.username}}</div>
+                <div class="template-edit">
+                    <input type="text" data-ng-model="user.username" />
+                </div>
+            </td>
+            <td>
+                <div class="template-display">
+                    {{user.password}}
+                </div>
+                <div class="template-edit">
+                    <input type="text" data-ng-model="user.password" />
+                </div>
+            </td>
+            <td>
+                <div class="template-display">
+                    {{user.displayName}}
+                </div>
+                <div class="template-edit">
+                    <input type="text" data-ng-model="user.displayName" />
+                </div>
+            </td>
+            <td>
+                <div class="template-display">
+                    {{user.email}}
+                </div>
+                <div class="template-edit">
+                    <input type="text" data-ng-model="user.email" />
+                </div>
+            </td>
+            <td>
+                <div class="template-display">
+                    <input type="button" value="Edit" data-ng-click="editUser(user)" />
+                    <input type="button" value="Delete" data-ng-click="deleteUser(user)" />
+                </div>
+                <div class="template-edit">
+                    <input type="button" value="Update" data-ng-click="updateUser(user)" />
+                    <input type="button" value="Cancel" data-ng-click="cancelEdit(user)" />
+                </div>
+            </td>
+        </tr>
+    </tbody>
+</table>

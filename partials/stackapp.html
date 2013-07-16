@@ -1,0 +1,19 @@
+﻿<p>
+    This page is pulling data via a URL from the stackexchange.com API. This API provides
+    data streams which return respones via json which have been linked up to an AngularJS
+    client side model and then bound to the list item elements displayed below.</p>
+<p>
+    The example third party call looks like this:</p>
+<pre>
+ $http.get("https://api.stackexchange.com/2.0/info?site=stackoverflow").success(function (data) {
+    $scope.model = data.items[0];
+ });
+</pre>
+<h3>
+    StackOverflow Statistics</h3>
+<hr />
+<ul>
+    <li data-ng-bind-template="Total questions: {{model.total_questions | number}}"></li>
+    <li data-ng-bind-template="Total users: {{model.total_users | number}}"></li>
+    <li data-ng-bind-template="Total active new users: {{model.new_active_users | number}}"></li>
+</ul>

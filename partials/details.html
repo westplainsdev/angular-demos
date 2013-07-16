@@ -1,0 +1,26 @@
+﻿<h3><span data-ng-bind-template="{{user.firstName}} {{user.lastName}}"></span><span data-ng-bind-template=", {{user.role}}" class="muted"></span></h3>
+<h4 class="muted" data-ng-bind-template="Salary: {{user.salary|currency}} monthly"></h4>    
+<p>The username for this person is: <strong><span data-ng-bind="user.username"></span></strong>
+<span data-ng-show="user.hireDate"> and the hire date for this person is: <strong><span data-ng-bind="user.hireDate|localDate"></span></strong></span></p>
+
+
+<!-- Button to trigger modal -->
+
+<p>
+    <a data-ng-href="#/view2/" class="btn btn" title="Returns back to the listing page." ui-jq="tooltip" data-placement="bottom"><i class="icon-arrow-left"></i>Back to List</a>
+    <button class="btn btn-primary" data-ng-click="modal.open()" data-ng-show="user.cities">View client locations</button>
+</p>
+<div data-modal="shouldBeOpen" data-close="modal.close()" data-options="opts">
+    <div class="modal-header">
+            <button type="button" class="close" data-ng-click="modal.close()" aria-hidden="true">&times;</button>
+        <h4>Client locations</h4>
+    </div>
+    <div class="modal-body">
+        <ul>
+            <li data-ng-repeat="item in cities"><span data-ng-bind-template="{{item.city}} {{item.state}}"></span></li>
+        </ul>
+    </div>
+    <div class="modal-footer">
+        <button class="btn btn-primary" data-ng-click="modal.close()">Okay</button>
+    </div>
+</div>

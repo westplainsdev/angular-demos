@@ -1,0 +1,80 @@
+﻿[
+    {"id":"1", 
+    "firstName":"Mark",	
+    "lastName":"Quetez", 
+    "username":"mquetez", 
+    "hireDate": "\/Date(1198908717056)\/",
+    "salary":"5200",
+    "role":"Sales",
+    "cities": [
+                {"city": "New York City", "state": "NY"},
+                {"city": "Atlanta", "state": "GA"},
+                {"city": "Dallas", "state": "TX"}   
+               ]},
+
+    {"id":"2", 
+    "firstName":"Jacob",	
+    "lastName":"Tumble", 
+    "username":"jtumble", 
+    "hireDate":"\/Date(1330848000000-0800)\/",
+    "salary":"5200",    
+    "role":"Sales",
+    "cities": [
+                {"city": "Washington", "state": "DC"},
+                {"city": "Charlston", "state": "SC"},
+                {"city": "Miami", "state": "FL"}   
+               ]},
+
+    {"id":"3", 
+    "firstName":"Randy",	
+    "lastName":"Chandler", 
+    "username":"rchandler", 
+    "hireDate":"\/Date(1320825600000-0800)\/",
+    "salary":"3100",
+    "role":"Online Support"},
+
+    {"id":"4", 
+    "firstName":"Sally",	
+    "lastName":"Plowman", 
+    "username":"splowman", 
+    "salary":"3125",
+    "role":"Online Support"},
+
+    {"id":"5", 
+    "firstName":"Erin",	
+    "lastName":"Wrenn",	
+    "username":"ewrenn", 
+    "salary":"2250",
+    "role":"Receptionist"},
+
+    {"id":"6", 
+    "firstName":"Paul",	
+    "lastName":"Barker", 
+    "username":"pbarker", 
+    "salary":"5200",
+    "role":"Sales",
+    "cities": [
+                {"city": "Washington", "state": "DC"},
+                {"city": "Charlston", "state": "SC"},
+                {"city": "Miami", "state": "FL"}   
+               ]},
+
+    {"id":"7", 
+    "firstName":"Ryan",	
+    "lastName":"Grosling", 
+    "username":"rgrosling", 
+    "salary":"9900",
+    "role":"CEO"},
+
+    {"id":"8", 
+    "firstName":"Mary",	
+    "lastName":"Brown",	
+    "username":"mbrown", 
+    "salary":"7200",
+    "role":"VP of Sales", 
+    "cities": [
+                {"city": "Washington", "state": "DC"},
+                {"city": "Charlston", "state": "SC"},
+                {"city": "Miami", "state": "FL"}   
+               ]}
+]
