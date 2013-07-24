@@ -15,6 +15,7 @@ Examples found:
 * a details page showing off angular UI bootstrap items
 * a usage of ngGrid - pulling from local json data store
 * a simple paging example - pulling from local json data store
+* Now showing an example of showdown (a markdown implementation via JS)
 
 
 -----------------------
