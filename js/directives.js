@@ -1,7 +1,20 @@
 'use strict';
 
 /* Directives */
-
+//  angular.module('mymodule').directive('mydirective', function() {
+//    return {
+//        restrict: 'A',
+//        require: 'ngModel',
+//        scope: {
+//            model: '=ngModel'
+//        },
+//        link: function(scope, elem, attrs) {
+//            // do something with the model
+//            var oldvalue = scope.model;
+//            scope.model = 'new value from directive';
+//        }
+//    };
+// });
 
 angular.module('myApp.directives', []).
   directive('appVersion', ['version', function(version) {
