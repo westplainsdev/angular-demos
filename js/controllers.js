@@ -15,6 +15,19 @@ angular.module("myApp").controller("MyCtrl1", ["$scope", "$http",
     }
 ]);
 
+angular.module("myApp").controller("markdownCtrl", ["$scope", "$http",
+    function($scope, $http){
+        $scope.load = function () {
+             $http.get("markdown/content.md").success(function (data) {
+                $scope.content = data;
+            });
+        };
+        
+        $scope.load();
+        
+    }
+]);
+
 angular.module("myApp").controller("MyCtrl2", ["$scope", "$http",
     function ($scope, $http) {
         $scope.messageText = "Good Afternoon Dave";
@@ -291,4 +304,5 @@ angular.module("myApp").controller("chartCtrl", ["$scope","$http",
 		segmentShowStroke : false
 	};
       
-    } ]);        
+    } ]); 
+     

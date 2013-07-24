@@ -2,7 +2,7 @@
 
 
 // Declare app level module which depends on filters, and services
-angular.module("myApp", ["myApp.filters", "myApp.services", "myApp.directives", "ngGrid", "ui.bootstrap", "ui", "angles"])
+angular.module("myApp", ["myApp.filters", "myApp.services", "myApp.directives", "ngGrid", "ui.bootstrap", "ui", "angles",])
 .config(["$routeProvider", "$httpProvider", function ($routeProvider, $httpProvider) {
     $routeProvider.when("/view1", { templateUrl: "partials/partial1.html", controller: "MyCtrl1" });
     $routeProvider.when("/view2", { templateUrl: "partials/partial2.html", controller: "MyCtrl2" });
@@ -13,7 +13,8 @@ angular.module("myApp", ["myApp.filters", "myApp.services", "myApp.directives", 
     $routeProvider.when("/cart", { templateUrl: "partials/cart.html", controller: "CartController" });
     $routeProvider.when("/todos", { templateUrl: "partials/todos.html", controller: "TodoController" });
     $routeProvider.when("/people", { templateUrl: "partials/people.html", controller: "PeopleController"});
-      $routeProvider.when("/chart", { templateUrl: "partials/charts.html", controller: "chartCtrl"});
+    $routeProvider.when("/chart", { templateUrl: "partials/charts.html", controller: "chartCtrl"});
+    $routeProvider.when("/showdown", { templateUrl: "partials/markdown.html", controller: "markdownCtrl"});  
     $routeProvider.otherwise({ redirectTo: "/view1" });
     delete $httpProvider.defaults.headers.common["X-Requested-With"];
 } ]);
