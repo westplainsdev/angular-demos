@@ -304,5 +304,39 @@ angular.module("myApp").controller("chartCtrl", ["$scope","$http",
 		segmentShowStroke : false
 	};
       
-    } ]); 
-     
+    } ]);    
+    
+angular.module("myApp").controller("contactsCtrl", ["$scope", "$http",
+    function ($scope, $http) {
+       $scope.contacts = [
+        { id:0, 'name': 'Viral', 
+          'email':'hello@gmail.com', 
+          'phone': '123-2343-44'
+        }
+    ];
+    }
+]);
+
+angular.module("myApp").controller('randomCtrl', ['$scope', '$http', 
+    function ($scope, $http) {
+      $scope.greeting = 'Hola! Here be Random Users.';
+      $scope.credit = "Credits: http://randomuser.me/";
+
+      $scope.users = [];
+
+      $scope.load = function () {
+          $http.get('http://randomuser.me/g/?results=5').success(function (data) {
+
+              for (var i = 0; i < data.results.length; i++) {
+                  $scope.users.push(data.results[i].user);
+              }
+
+          }).error(function (data) {
+              $scope.error = 'something bad happened';
+          });
+      };
+
+      $scope.load();
+
+  } ]);
+

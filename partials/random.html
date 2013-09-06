@@ -1,0 +1,23 @@
+ <h3 data-ng-bind="greeting"></h3>
+ <ul data-ng-repeat="user in users" id="userList">
+        <li>
+            <img data-ng-src="{{user.picture}}" class="avatar"></img>
+            <p>
+                <span class="name" data-ng-bind-template="{{user.name.title|capitalize}} {{user.name.first |capitalize }} {{user.name.last |capitalize}}">
+                </span>
+                <br />
+                Gender: <span data-ng-bind="user.gender"></span>
+                <br />
+                Email: <a data-ng-href="user.email"><span data-ng-bind="user.email"></span></a>
+                <br />
+                Phone <span data-ng-bind="user.phone"></span>
+                <br />
+                Location: <span data-ng-bind-template="{{user.location.street|capitalize}} {{user.location.city|capitalize}}, {{user.location.state|capitalize}} {{user.location.zip}}">
+                </span>
+            </p>
+        </li>
+    </ul>
+  
+        <h4 style="clear: both;" class="muted credit" data-ng-bind="credit"></h4>
+ 
+    

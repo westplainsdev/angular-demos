@@ -15,6 +15,8 @@ angular.module("myApp", ["myApp.filters", "myApp.services", "myApp.directives", 
     $routeProvider.when("/people", { templateUrl: "partials/people.html", controller: "PeopleController"});
     $routeProvider.when("/chart", { templateUrl: "partials/charts.html", controller: "chartCtrl"});
     $routeProvider.when("/showdown", { templateUrl: "partials/markdown.html", controller: "markdownCtrl"});  
+    $routeProvider.when("/contacts", { templateUrl: "partials/contacts.html", controller: "contactsCtrl"});
+    $routeProvider.when("/random", { templateUrl: "partials/random.html", controller: "randomCtrl"});
     $routeProvider.otherwise({ redirectTo: "/view1" });
     delete $httpProvider.defaults.headers.common["X-Requested-With"];
 } ]);

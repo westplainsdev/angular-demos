@@ -16,6 +16,7 @@ Examples found:
 * a usage of ngGrid - pulling from local json data store
 * a simple paging example - pulling from local json data store
 * Now showing an example of showdown (a markdown implementation via JS)
+* Page showing random users coming from a 3rd party JSON feed
 
 
 -----------------------

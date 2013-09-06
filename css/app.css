@@ -33,3 +33,31 @@ body
 
 th.link { width: 80px;}
 td.link { text-align: center;}
+
+.name
+{
+    font-weight: bold;
+}
+img.avatar
+{
+    float: left;
+    width: 100px;
+    height: 100px;
+    margin: 10px;
+    border: solid 1px #666666;
+}
+#userList li p
+{
+    float: left;
+}
+#userList {
+    margin-bottom: 30px;
+    list-style: none;
+}
+#userList li
+{
+    clear: both;
+}
+
+   
+
